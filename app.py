@@ -4,6 +4,8 @@ from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
 app.secret_key = "123456"
 
+init_db()
+
 # criar banco
 def init_db():
     conn = sqlite3.connect('usuarios.db')
